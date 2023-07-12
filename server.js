@@ -17,12 +17,17 @@ mongoose.connection.on('error',(error)=>{
 })
 
 require('./models/user_model');
+require('./models/post_model');
 
 app.use(cors());
 app.use(express.json());
 
 require('./models/user_model');
+require('./models/post_model');
 app.use(require('./routes/user_routes'));
+app.use(require('./routes/post_routes'));
+app.use(require('./routes/file_routes'));
+// app.use(require('./routes/file_routes'));
 
 
 
